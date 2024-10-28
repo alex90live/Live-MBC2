@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Live From alEx !</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* توزيع العناصر عمودياً */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://i.ibb.co/BysyjPV/IMG-20241027-134931-096.jpg');
+            background-size: cover; /*
+            background-position: center;
+        }
+        iframe {
+            width: 98%; /* زيادة عرض iframe */
+            height: 35%; /* زيادة ارتفاع iframe */
+            border: none;
+            transform: rotate(90deg); /* تدوير الفيديو 90 درجة */
+            display: none; /* اخفاء iframe بشكل افتراضي */
+        }
+        .button {
+            margin-top: 60px; /* مسافة بين البث المباشر والزر */
+            padding: 10px 20px;
+            font-size: 16px;
+            color: brown;
+            background-color: white; /* لون الزر */
+            border: none;
+            border-radius: 50px; /* زوايا مدورة */
+            cursor: pointer;
+            text-decoration: 20; /* إزالة التسطير من النص */
+            margin-right: 7px; /* مسافة بين الازرار */
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .button-container {
+            display: flex; /* جعل الازرار في نفس الصف */
+        }
+    </style>
+</head>
+<body>
+    <iframe id="video1" src="https://edge66.magictvbox.com/liveApple/MBC_2/tracks-v1a1/mono.m3u8" allowfullscreen></iframe>
+    <iframe id="video2" src="https://t.ly/MoH_u" allowfullscreen></iframe> 
+
+    <div class="button-container">
+        <button id="server1" class="button">Server 1</button>
+        <button id="server2" class="button">Server 2</button>
+    </div>
+    <a href="https://t.me/M_L_F" class="button">TeleGram ♥</a> <!-- زر الرابط -->
+
+    <script>
+        // الحصول على عناصر iframe و الازرار
+        const video1 = document.getElementById('video1');
+        const video2 = document.getElementById('video2');
+        const server1Button = document.getElementById('server1');
+        const server2Button = document.getElementById('server2');
+
+        // معالجة النقر على زر Server 1
+        server1Button.addEventListener('click', () => {
+            // اخفاء الفيديو 2
+            video2.style.display = 'none';
+            // عرض الفيديو 1
+            video1.style.display = 'block';
+        });
+
+        // معالجة النقر على زر Server 2
+        server2Button.addEventListener('click', () => {
+            // اخفاء الفيديو 1
+            video1.style.display = 'none';
+            // عرض الفيديو 2
+            video2.style.display = 'block';
+        });
+
+        // عرض الفيديو 1 بشكل افتراضي
+        video1.style.display = 'block';
+    </script>
+</body>
+</html>
